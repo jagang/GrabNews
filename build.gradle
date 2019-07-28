@@ -36,4 +36,5 @@ project.ext {
     picassoVersion = "2.5.1"
     retrofitVersion = "2.4.0"
     corektxersion = "1.0.2"
+    materialVersion = "1.0.0"
 }

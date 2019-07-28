@@ -16,7 +16,7 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(NewsViewModel::class)
-    abstract fun bindUserViewModel(userViewModel: NewsViewModel): ViewModel
+    abstract fun bindNewsViewModel(userViewModel: NewsViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: GrabNewsViewModelFactory): ViewModelProvider.Factory

@@ -1,17 +1,17 @@
 package com.jagan.grabnews.view
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-
+import androidx.lifecycle.ViewModelProviders
 import com.jagan.grabnews.R
+import com.jagan.grabnews.di.Injectable
 import javax.inject.Inject
 
-class NewsFragment : Fragment() {
+class NewsFragment : Fragment(), Injectable {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -27,10 +27,10 @@ class NewsFragment : Fragment() {
         return inflater.inflate(R.layout.news_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(NewsViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
 
 }
