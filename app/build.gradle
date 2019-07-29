@@ -58,6 +58,11 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$project.lifecycleVersion"
     kapt "androidx.lifecycle:lifecycle-compiler:$project.lifecycleVersion"
 
+    // Room
+    implementation "androidx.room:room-runtime:$project.roomVersion"
+    implementation "androidx.room:room-ktx:$project.roomVersion"
+    kapt "androidx.room:room-compiler:$project.roomVersion"
+
     // Network
     implementation "com.squareup.picasso:picasso:$project.picassoVersion"
     implementation "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
@@ -73,6 +78,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
     implementation "com.google.android.material:material:$project.materialVersion"
+
 }
 repositories {
     mavenCentral()
